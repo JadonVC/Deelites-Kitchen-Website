@@ -1,0 +1,325 @@
+/* Variables */
+:root {
+    --primary-color: #ee5058;
+    --primary-bg-color: #ffffff;
+    --light-color: #fff;
+    --pop-color: #ffba00;
+    --text-color: #000000;
+}
+
+/*================================================*/
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, var(--primary-bg-color), var(--light-color));
+    color: var(--primary-color);
+    display: grid;
+    grid-template-rows: 6rem 1fr 3rem;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+    min-height: 100vh
+}
+
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+ul li {
+    margin-bottom: 16px; /* Adjust this value for more or less spacing */
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    position: fixed;
+    left: 0;
+    width: 100%
+}
+
+header {
+    top: 0;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+footer {
+    bottom: 0;
+    height: 3rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+/*================================================*/
+/* Utility Classes */
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.right-indent {
+    padding-left: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/*================================================*/
+/* Overall layouts */
+
+/*================================================*/
+/* Header styles */
+h1 {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: var(--light-color);
+}
+
+nav a:hover, 
+nav a:active {
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+
+/*================================================*/
+/* Header layouts */
+
+/*================================================*/
+/* Main styles */
+main {
+    display: flex; /* Part 4: Make main a flex container */
+    justify-content: space-evenly; /* Part 4: Evenly distribute space */
+    align-items: center; /* Part 4: Center items vertically */
+    gap: 1rem; /* Part 4: Set gap between items */
+    flex-wrap: wrap; 
+    padding: 1rem;
+    background-color: var(--light-color);
+    grid-area: main;
+    margin-top: 0; /* Remove the previous margin */ 
+}
+
+h2 {
+    color: var(--pop-color);
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*================================================*/
+/* Home page content */
+main li {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+
+main a {
+    color: var(--text-color);
+}
+
+main a:hover,
+main a:active {
+    border-bottom: 2px solid var(--primary-bg-color);
+}
+
+/*Carousel Code */ 
+
+.carousel-container {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel {
+    list-style-type: none;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-item > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    position: absolute;
+    top: 50%;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.carousel-btn.left {
+    left: -2.5rem;
+}
+
+.carousel-btn.right {
+    right: -2.5rem;
+}
+
+.carousel-btn:hover {
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: white;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    border-radius: 50%;
+
+    opacity: 0.3;
+
+    transition: 300ms opacity ease-in-out;
+}
+
+.nav-item.active {
+    opacity: 0.7;
+}
+
+/*================================================*/
+/* Menu page content */
+table {
+    border: 3px solid var(--primary-bg-color);
+    border-collapse: collapse;
+    width: 100%;
+    margin-inline: auto;
+}
+
+thead tr {
+    background-color: var(--primary-bg-color);
+    color: var(--light-color);
+}
+
+th, 
+td {
+    padding: 0.3rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(4n) {
+    border-bottom: 3px solid var(--primary-bg-color);
+}
+
+caption {
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
+
+thead tr th {
+    color: var(--text-color); /* Set the text color to black */
+}
+
+/*================================================*/
+/*Style 'container-content' class*/
+.container-content {
+    padding: 0.5rem; /* Part 4: Add padding */
+    border-radius: 10px; /* Part 4: Add border radius */
+    box-shadow: 0px 5px 10px 0px rgba(17, 12, 46, 0.8); /* Part 4: Add box shadow */
+}
+
+.container-content table th,
+.container-content table td,
+.container-content table caption {
+    color: var(--text-color); /* Set the text color to black */
+    text-align: center;
+}
+
+/*================================================*/
+/*Main content area layouts*/
+.container-img, .container-content {
+    flex-basis: 300px; /* Set initial width of each item */
+    flex-grow: 1; /* Allow the items to grow and fill available space */
+    max-width: 500px; /* Set the maximum width to avoid items becoming too large */
+}
+
+.container-content p {
+    color: var(--text-color); /* Set paragraph text color to black */
+}
+
+
+
+/*================================================*/
+/*Footer layouts*/
+
+footer{
+    display: flex; /* Part 5: Make footer a flex container */
+    justify-content: center; /* Part 5: Center items horizontally */
+    align-items: center; /* Part 5: Center items vertically */
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jadon Chanthavong">
+    <title>Deelite's Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Deelites-Kitchen.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..800&family=Rubik:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Deelite's Kitchen</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="carousel-container">
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+            
+            <ul class="carousel">
+              <li class="carousel-item active"><img src="assets/lao-food.jpg" alt="food1"></li>
+              <li class="carousel-item"><img src="assets/image1.jpg" alt="food2"></li>
+              <li class="carousel-item"><img src="assets/image2.jpg" alt="food3"></li>
+              <li class="carousel-item"><img src="assets/image3.webp" alt="food4"></li>
+            </ul>
+            
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+          
+            <div class="carousel-nav">
+              <div class="nav-item active"></div>
+              <div class="nav-item"></div>
+              <div class="nav-item"></div>
+              <div class="nav-item"></div>
+            </div>
+          </div>
+          
+        <div class="container-content">
+            
+            <h2 class="center-text">Our Story</h2>
+            <p> Deelite's Kitchen provides authentic Lao food through a menu that emphasizes the unique, 
+                key ingredients of Laos. </p> <br>
+            
+                <h2 class="center-text">Events</h2>
+                <p> To Be Announced</p>
+                <p class="right-indent"></p>
+                   
+                <h2 class="center-text">Contact Us</h2>
+                <address class="right-indent">
+                    Email: <a href="mailto:DeelitesKitchen@gmail.com">DeelitesKitchen@gmail.com</a><br>
+                    Phone: <a href="tel:+19109755142">(910)975-5142</a><br>
+                </address>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="dynamic-year"></span> Deelite's Kitchen. All Rights Reserved.</p>
+    </footer>
+     <script src="dynamic.js" defer></script>
+</body>
+</html>

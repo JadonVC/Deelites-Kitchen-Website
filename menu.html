@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jadon Chanthavong">
+    <title>Deelite's Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Deelites-Kitchen.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..800&family=Rubik:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Deelite's Kitchen</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container-img">
+            <img src="assets/SAUSAGE.jpg" alt="dinner" width="400" height="600">
+        </div>
+        <div class="container-content">
+            <h2 class="center-text">Our Menu</h2>
+
+            <table>
+                <caption>Dinner, Food & Drink Options</caption> 
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="4">Protein Options</th>
+                        <td>(4) Beef Skewers</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <td>(4) Pork Skewers</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <td>(4) Chicken Skewers</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <td>(4) Lao Sausage</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Appetizers</th>
+                        <td>Thum Mak Hoong</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>(7) Egg Rolls</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">Drink Options</th>
+                        <td>Thai Tea</td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <td>Thai Iced Coffee</td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <td>Soda</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Water</td>
+                        <td>$1.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="font-sm center-text">* Please make us aware of any allergies</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="dynamic-year"></span> Deelite's Kitchen. All Rights Reserved.</p>
+    </footer>
+    <script src="dynamic.js" defer></script>
+</body>
+</html>
